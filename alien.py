@@ -11,7 +11,7 @@ def run_game():
     # 初始化游戏并创建一个屏幕对象
     pygame.init()
     ai_sttings = Settings()
-    screen = pygame.display.set_mode((ai_sttings.screen_wdith,ai_sttings.screen_height))
+    screen = pygame.display.set_mode((ai_sttings.screen_wdith, ai_sttings.screen_height))
 
     pygame.display.set_caption("Alien vasion")
 
