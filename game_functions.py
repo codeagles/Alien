@@ -25,9 +25,11 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
     elif event.key == pygame.K_LEFT:
         ship.moving_left = True
     elif event.key == pygame.K_SPACE:
-        fire_bullet(ai_settings,screen,ship,bullets)
+        fire_bullet(ai_settings, screen, ship, bullets)
+
 
 def fire_bullet(ai_settings, screen, ship, bullets):
+
     """如果还没有到达限制，就发射一颗子弹"""
     # 创建新子弹
     if len(bullets) < ai_settings.bullets_allowed:
@@ -43,16 +45,18 @@ def check_keyup_events(event, ship):
     elif event.key == pygame.K_LEFT:
         ship.moving_left = False
 
-def update_screen( ai_settings, screen, ship, bullets):
+
+def update_screen(ai_settings, screen, ship, bullets):
+
     """更新屏幕上的图像，并切换到新屏幕"""
-    #每次循环时都重新绘制屏幕
+    # 每次循环时都重新绘制屏幕
     screen.fill(ai_settings.bg_color)
     # 在飞船和外星人后面重画所有子弹
     for bullet in bullets.sprites():
         bullet.draw_bullet()
 
     ship.blitme()
-    #让最近绘制的屏幕可见
+    # 让最近绘制的屏幕可见
     pygame.display.flip()
 
 def update_bullets(bullets):
