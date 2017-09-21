@@ -8,7 +8,6 @@ import game_functions as gf
 from pygame.sprite import Group
 
 
-
 def run_game():
 
     # 初始化游戏并创建一个屏幕对象
