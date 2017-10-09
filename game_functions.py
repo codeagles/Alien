@@ -45,7 +45,7 @@ def check_keyup_events(event, ship):
         ship.moving_left = False
 
 
-def update_screen(ai_settings, screen, ship, bullets):
+def update_screen(ai_settings, screen, ship, alien, bullets):
     """更新屏幕上的图像，并切换到新屏幕"""
     # 每次循环时都重新绘制屏幕
     screen.fill(ai_settings.bg_color)
@@ -54,6 +54,7 @@ def update_screen(ai_settings, screen, ship, bullets):
         bullet.draw_bullet()
 
     ship.blitme()
+    alien.blitme()
     # 让最近绘制的屏幕可见
     pygame.display.flip()
 
