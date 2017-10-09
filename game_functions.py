@@ -76,13 +76,14 @@ def create_fleet(ai_settings, screen, aliens):
     # 外星人间距为外星人宽度
     alien = Alien(ai_settings, screen)
     alien_width = alien.rect.width
-    available_space_x = ai_settings.screen_width - 2*alien_width
+    available_space_x = ai_settings.screen_width - 2 * alien_width
     number_alien_x = int(available_space_x/(2*alien_width))
 
     # 创建第一行外星人
     for alien_number in range(number_alien_x):
         # 创建一个外星人并加入当前行
-        aline = Alien(ai_settings, screen)
+        alien = Alien(ai_settings, screen)
         alien.x = alien_width + 2*alien_width*alien_number
+        alien.rect.x = alien.x
         aliens.add(alien)
 
