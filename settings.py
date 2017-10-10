@@ -30,7 +30,7 @@ class Settings():
         self.fleet_direction = 1
 
         # 以什么样的速度加快游戏节奏
-        self.speedup_scale = 1.1
+        self.speedup_scale = 1.2
         self.initialize_dynamic_settings()
 
     def initialize_dynamic_settings(self):
