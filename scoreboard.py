@@ -64,7 +64,7 @@ class Scoreboard():
         self.level_rect.right = self.score_rect.right
         self.level_rect.top = self.score_rect.bottom + 10
 
-    def prep_ship(self):
+    def prep_ships(self):
         """显示还剩下多少飞船"""
         self.ships = Group()
         for ship_number in range(self.stats.ships_left):
