@@ -5,10 +5,10 @@ import pygame.font
 class Scoreboard():
     """显示得分信息的类"""
 
-    def _ini_(self, ai_settings, screen, stats):
+    def __init__(self, ai_settings, screen, stats):
         """初始化现实得分涉及的属性"""
         self.screen = screen
-        self.screen_rect =screen.get_rect()
+        self.screen_rect = screen.get_rect()
         self.ai_settings = ai_settings
         self.stats = stats
 
@@ -32,6 +32,6 @@ class Scoreboard():
     def show_score(self):
         """在屏幕上显示得分"""
         self.screen.blit(self.score_image, self.score_rect)
-        
+
 
 
